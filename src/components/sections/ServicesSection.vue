@@ -8,6 +8,10 @@ const services = [
     title: "Einzel- oder Serientermin",
     text: "Einmalig oder wiederkehrend, ganz nach Bedarf.",
   },
+  {
+    title: "Günstig & ohne Vertragsbindung",
+    text: "Faire Preise ohne Abo-Zwang und Mindestlaufzeit – im Vergleich zu großen Komplett-Reinigungsfirmen meist die deutlich flexiblere und günstigere Wahl.",
+  },
 ];
 </script>
 

@@ -1,5 +1,6 @@
 <script setup>
-import { PhInstagramLogo as InstagramLogo, PhEnvelopeSimple as EnvelopeSimple } from "@phosphor-icons/vue";
+import { PhInstagramLogo as InstagramLogo, PhEnvelopeSimple as EnvelopeSimple, PhTiktokLogo as TiktokLogo } from "@phosphor-icons/vue";
+import { business, priorityCities } from "../data/serviceArea.js";
 
 const year = new Date().getFullYear();
 </script>
@@ -9,6 +10,10 @@ const year = new Date().getFullYear();
     <div class="container footer-grid">
       <div class="footer-brand">
         <span class="footer-name">LN Fensterputz</span>
+        <address class="footer-address">
+          {{ business.street }}<br />
+          {{ business.zip }} {{ business.city }}
+        </address>
       </div>
 
       <nav class="footer-links" aria-label="Footer Navigation">
@@ -16,6 +21,11 @@ const year = new Date().getFullYear();
         <router-link :to="{ path: '/', hash: '#ablauf' }">Ablauf</router-link>
         <router-link :to="{ path: '/', hash: '#einsatzgebiet' }">Einsatzgebiet</router-link>
         <router-link :to="{ path: '/', hash: '#kontakt' }">Kontakt</router-link>
+      </nav>
+
+      <nav class="footer-links" aria-label="Einsatzgebiet Navigation">
+        <a href="/fensterreinigung-bodenseekreis/">Fensterreinigung in der Umgebung</a>
+        <a v-for="c in priorityCities" :key="c.slug" :href="`/${c.slug}/`">Fensterreinigung {{ c.name }}</a>
       </nav>
 
       <div class="footer-contact">
@@ -31,6 +41,16 @@ const year = new Date().getFullYear();
         >
           <InstagramLogo :size="18" weight="regular" aria-hidden="true" />
           @ln.fensterputz<span class="visually-hidden"> (öffnet in neuem Tab)</span>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@fensterputzln"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-icon-link"
+        >
+            <TiktokLogo :size="18" weight="regular" aria-hidden="true" />
+            @fensterputzln<span class="visually-hidden"> (öffnet in neuem Tab)</span>
         </a>
       </div>
     </div>
@@ -64,6 +84,14 @@ const year = new Date().getFullYear();
   font-size: 1.15rem;
   letter-spacing: -0.01em;
   color: #fff;
+}
+
+.footer-address {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-style: normal;
+  line-height: 1.6;
 }
 
 .footer-links,
@@ -101,7 +129,13 @@ const year = new Date().getFullYear();
 
 @media (min-width: 720px) {
   .footer-grid {
-    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer-grid {
+    grid-template-columns: 1.1fr 1fr 1fr 1fr;
   }
 }
 </style>

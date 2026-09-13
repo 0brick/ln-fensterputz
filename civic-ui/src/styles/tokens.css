@@ -1,0 +1,119 @@
+/*
+ * Design tokens, lifted from the real color/spacing values used on the
+ * federal reference site (found in its shipped CSS custom properties) so the
+ * palette and rhythm match closely. The one thing we deliberately swapped is
+ * the typeface: the reference site uses a font under a restrictive federal
+ * license (BundesSans/BundesSerif), which we're not allowed to ship. We use
+ * "Source Sans 3" instead — it's metrically close (same grotesque, similar
+ * x-height) and fully open source, so the layout doesn't shift.
+ *
+ * Every component reads from these variables only, so a consumer can
+ * reskin the whole library by overriding this file (or a subset of it) in
+ * their own CSS — no build step or component edits required.
+ */
+
+:root {
+  /* ---- Brand colors ---- */
+  --cui-color-navy: #001d35; /* primary text / headline / ink */
+  --cui-color-navy-700: #102d49;
+  --cui-color-navy-600: #30353b;
+  --cui-color-teal: #02767f; /* secondary accent, links on light */
+  --cui-color-purple: #3b2781; /* deep accent */
+  --cui-color-violet: #6e57ce; /* interactive accent, hover states */
+  --cui-color-sky: #80cdeb; /* light accent, illustration tint */
+  --cui-color-yellow: #ffed3e; /* primary call-to-action / highlight */
+  --cui-color-yellow-ring: #fae83d;
+
+  --cui-color-white: #ffffff;
+  --cui-color-grey-50: #f6f6f8;
+  --cui-color-grey-100: #eeeeee;
+  --cui-color-grey-300: #cccccc;
+  --cui-color-grey-500: #7f7f7f;
+  --cui-color-grey-700: #4b5259;
+
+  --cui-color-success: #0e7a3f;
+  --cui-color-warning: #a15c00;
+  --cui-color-danger: #b3261e;
+  --cui-color-info: var(--cui-color-teal);
+
+  /* ---- Semantic aliases (what components actually consume) ---- */
+  --cui-text: var(--cui-color-navy);
+  --cui-text-muted: var(--cui-color-grey-700);
+  --cui-text-on-dark: var(--cui-color-white);
+  --cui-heading: var(--cui-color-navy);
+  --cui-bg: var(--cui-color-white);
+  --cui-bg-subtle: var(--cui-color-grey-50);
+  --cui-bg-muted: var(--cui-color-grey-100);
+  --cui-border: var(--cui-color-grey-300);
+  --cui-border-strong: var(--cui-color-navy);
+
+  --cui-primary: var(--cui-color-navy);
+  --cui-primary-contrast: var(--cui-color-white);
+  --cui-accent: var(--cui-color-yellow);
+  --cui-accent-contrast: var(--cui-color-navy);
+  --cui-accent-hover: #f5df1f;
+  --cui-link: var(--cui-color-teal);
+  --cui-link-hover: var(--cui-color-purple);
+  --cui-focus-ring: var(--cui-color-yellow-ring);
+
+  /* ---- Typography ---- */
+  --cui-font-sans:
+    'Source Sans 3', 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --cui-font-serif: 'Source Serif 4', 'Georgia', serif;
+  --cui-font-mono: 'Source Code Pro', 'SFMono-Regular', Consolas, monospace;
+
+  --cui-fz-base: 1.6rem;
+  --cui-lh-base: 1.6;
+  --cui-fz-sm: 1.4rem;
+  --cui-fz-h1: clamp(3.2rem, 4vw + 1rem, 5.6rem);
+  --cui-fz-h2: clamp(2.6rem, 2.4vw + 1rem, 3.6rem);
+  --cui-fz-h3: clamp(2.1rem, 1.2vw + 1rem, 2.6rem);
+  --cui-fz-h4: 1.9rem;
+
+  /* ---- Spacing scale (reference site's gutter grid) ---- */
+  --cui-space-1: 0.4rem;
+  --cui-space-2: 0.8rem;
+  --cui-space-3: 1.2rem;
+  --cui-space-4: 1.6rem;
+  --cui-space-5: 2.4rem;
+  --cui-space-6: 3.2rem;
+  --cui-space-7: 4.8rem;
+  --cui-space-8: 6.4rem;
+  --cui-gutter: 2.4em;
+  --cui-container-max: 1248px;
+
+  /* ---- Shape / elevation ---- */
+  --cui-radius-sm: 2px;
+  --cui-radius-md: 4px;
+  --cui-radius-lg: 8px;
+  --cui-radius-pill: 999px;
+  --cui-shadow-sm: 0 1px 2px rgba(0, 29, 53, 0.12);
+  --cui-shadow-md: 0 4px 16px rgba(0, 29, 53, 0.14);
+  --cui-shadow-lg: 0 12px 32px rgba(0, 29, 53, 0.18);
+
+  /* ---- Motion ---- */
+  --cui-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --cui-duration-fast: 120ms;
+  --cui-duration: 200ms;
+  --cui-duration-slow: 320ms;
+
+  /* ---- Layering ---- */
+  --cui-z-dropdown: 1000;
+  --cui-z-sticky: 1010;
+  --cui-z-offcanvas: 1040;
+  --cui-z-modal: 1050;
+  --cui-z-popover: 1060;
+  --cui-z-tooltip: 1070;
+  --cui-z-toast: 1080;
+}
+
+/* Optional dark surface tokens — used by components that render on the
+   navy hero/footer bands, toggled via [data-cui-theme="dark"]. */
+[data-cui-theme='dark'] {
+  --cui-text: var(--cui-color-white);
+  --cui-heading: var(--cui-color-white);
+  --cui-bg: var(--cui-color-navy);
+  --cui-bg-subtle: var(--cui-color-navy-700);
+  --cui-border: rgba(255, 255, 255, 0.24);
+  --cui-link: var(--cui-color-sky);
+}

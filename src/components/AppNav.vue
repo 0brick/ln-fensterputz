@@ -9,6 +9,10 @@ const links = [
   { label: "Kontakt", hash: "#kontakt" },
 ];
 
+// Führt aus der SPA heraus zu einer echten, eigenständig gebauten Seite
+// (siehe scripts/generate-pages.mjs) statt zu einer Vue-Route.
+const areaOverviewHref = "/fensterreinigung-bodenseekreis/";
+
 function closeMenu() {
   open.value = false;
 }
@@ -28,6 +32,7 @@ function closeMenu() {
           :to="{ path: '/', hash: link.hash }"
           >{{ link.label }}</router-link
         >
+        <a :href="areaOverviewHref">Alle Orte</a>
       </nav>
 
 
@@ -51,6 +56,7 @@ function closeMenu() {
           @click="closeMenu"
           >{{ link.label }}</router-link
         >
+        <a :href="areaOverviewHref" @click="closeMenu">Alle Orte</a>
         <router-link :to="{ path: '/', hash: '#kontakt' }" class="btn btn-primary" @click="closeMenu">
           Termin anfragen
         </router-link>

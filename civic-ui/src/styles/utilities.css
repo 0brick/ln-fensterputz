@@ -1,0 +1,75 @@
+/* A handful of layout utilities so sections/pages can be assembled without
+   writing new CSS for every project. Deliberately small — this is a
+   component library, not a utility framework. */
+
+.cui-container {
+  width: 100%;
+  max-width: var(--cui-container-max);
+  margin-inline: auto;
+  padding-inline: var(--cui-gutter);
+}
+
+.cui-container--narrow {
+  max-width: 860px;
+}
+
+.cui-section {
+  padding-block: var(--cui-space-8);
+}
+
+.cui-section--subtle {
+  background: var(--cui-bg-subtle);
+}
+
+.cui-section--dark {
+  background: var(--cui-color-navy);
+  color: var(--cui-color-white);
+}
+
+.cui-grid {
+  display: grid;
+  gap: var(--cui-space-5);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.cui-grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+@media (min-width: 900px) {
+  .cui-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cui-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cui-grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cui-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cui-space-4);
+}
+
+.cui-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--cui-space-3);
+}
+
+.cui-text-center {
+  text-align: center;
+}
+
+.cui-eyebrow {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cui-color-teal);
+  margin-bottom: var(--cui-space-2);
+}

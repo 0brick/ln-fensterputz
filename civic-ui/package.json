@@ -1,0 +1,44 @@
+{
+  "name": "civic-ui",
+  "version": "0.1.0",
+  "description": "A clean, professional Vue 3 component library with a calm, high-trust institutional design language — accessible and ready to drop into any project.",
+  "type": "module",
+  "license": "MIT",
+  "author": "",
+  "keywords": [
+    "vue",
+    "vue3",
+    "component-library",
+    "design-system",
+    "ui-kit"
+  ],
+  "main": "./dist/civic-ui.umd.cjs",
+  "module": "./dist/civic-ui.es.js",
+  "style": "./dist/civic-ui.css",
+  "exports": {
+    ".": {
+      "import": "./dist/civic-ui.es.js",
+      "require": "./dist/civic-ui.umd.cjs"
+    },
+    "./style.css": "./dist/civic-ui.css",
+    "./tokens.css": "./src/styles/tokens.css"
+  },
+  "files": [
+    "dist",
+    "src/styles"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "cross-env MODE=lib vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.0",
+    "cross-env": "^7.0.3",
+    "vite": "^5.4.0",
+    "vue": "^3.5.0"
+  }
+}

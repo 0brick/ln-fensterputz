@@ -1,0 +1,120 @@
+/* Base reset + typography. Loaded once, globally, alongside tokens.css. */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:wght@600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px, so the scale above reads in "px-like" units */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--cui-font-sans);
+  font-size: var(--cui-fz-base);
+  line-height: var(--cui-lh-base);
+  color: var(--cui-text);
+  background: var(--cui-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 var(--cui-space-4);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--cui-heading);
+}
+
+h1 {
+  font-size: var(--cui-fz-h1);
+}
+h2 {
+  font-size: var(--cui-fz-h2);
+}
+h3 {
+  font-size: var(--cui-fz-h3);
+}
+h4 {
+  font-size: var(--cui-fz-h4);
+}
+
+p {
+  margin: 0 0 var(--cui-space-4);
+}
+
+a {
+  color: var(--cui-link);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--cui-link-hover);
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+ul,
+ol {
+  padding-left: 1.8rem;
+}
+
+/* Visible, high-contrast focus ring everywhere — required for the kind of
+   accessibility conformance federal sites are built to (BITV / WCAG 2.1 AA). */
+:focus-visible {
+  outline: 3px solid var(--cui-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--cui-radius-sm);
+}
+
+.cui-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.cui-skip-link {
+  position: absolute;
+  left: var(--cui-space-3);
+  top: -100px;
+  z-index: var(--cui-z-toast);
+  background: var(--cui-color-yellow);
+  color: var(--cui-color-navy);
+  padding: var(--cui-space-2) var(--cui-space-4);
+  border-radius: var(--cui-radius-md);
+  font-weight: 700;
+  transition: top var(--cui-duration) var(--cui-ease);
+}
+
+.cui-skip-link:focus {
+  top: var(--cui-space-3);
+}
