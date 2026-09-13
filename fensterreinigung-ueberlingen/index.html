@@ -25,105 +25,230 @@
     <meta name="twitter:title" content="Fensterreinigung & Fensterputzen in Überlingen | LN Fensterputz" />
     <meta name="twitter:description" content="Überlingen Fensterputzen & Fensterreinigung – günstig und flexibel, ohne Vertragsbindung. Fenster, Rahmen & Fensterbänke von LN Fensterputz aus Markdorf. Jetzt Termin anfragen." />
     <meta name="twitter:image" content="https://ln-fensterputz.de/media/og-image.png" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"LN Fensterputz","image":"https://ln-fensterputz.de/media/og-image.png","url":"https://ln-fensterputz.de/","email":"info@ln-fensterputz.de","sameAs":["https://www.instagram.com/ln.fensterputz/","https://www.tiktok.com/@fensterputzln"],"priceRange":"€","address":{"@type":"PostalAddress","streetAddress":"Döllenstraße 22","postalCode":"88677","addressLocality":"Markdorf","addressCountry":"DE"},"geo":{"@type":"GeoCoordinates","latitude":47.7177,"longitude":9.3939},"areaServed":[{"@type":"Place","name":"Überlingen"},{"@type":"Place","name":"Markdorf"}]}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite"},{"@type":"ListItem","position":2,"name":"Fensterreinigung in der Umgebung","item":"https://ln-fensterputz.de/fensterreinigung-bodenseekreis/"},{"@type":"ListItem","position":3,"name":"Überlingen"}]}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Bietet ihr auch Reinigung zwischen Feriengast-Wechseln in Überlingen an?","acceptedAnswer":{"@type":"Answer","text":"Ja, das ist bei uns keine Ausnahme. Kurzfristige Termine zwischen zwei Vermietungen lassen sich in der Regel gut einrichten – einfach mit Wunschzeitraum anfragen."}}]}</script>
+
+    <link rel="preload" href="/fonts/fira-sans-900.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/fira-sans-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/media/hero-wide.webp" as="image" type="image/webp" />
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"LN Fensterputz","image":"https://ln-fensterputz.de/media/og-image.png","url":"https://ln-fensterputz.de/","email":"info@ln-fensterputz.de","priceRange":"€","sameAs":["https://www.instagram.com/ln.fensterputz/","https://www.tiktok.com/@fensterputzln"],"address":{"@type":"PostalAddress","streetAddress":"Döllenstraße 22","postalCode":"88677","addressLocality":"Markdorf","addressCountry":"DE"},"geo":{"@type":"GeoCoordinates","latitude":47.7177,"longitude":9.3939},"areaServed":[{"@type":"Place","name":"Überlingen"},{"@type":"Place","name":"Markdorf"}]}</script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <a href="/" class="brand">LN Fensterputz</a>
-        <a href="/#/#kontakt" class="btn btn-primary header-cta">Termin anfragen</a>
+    <header class="nav">
+      <div class="container nav-row">
+        <a href="/" class="brand"><span>LN Fensterputz</span></a>
+
+        <nav class="links" aria-label="Hauptnavigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#einsatzgebiet">Einsatzgebiet</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <button class="burger" aria-expanded="false" aria-label="Menü öffnen" aria-controls="mobile-menu">
+          <span></span><span></span>
+        </button>
       </div>
+
+      <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile Navigation">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#einsatzgebiet">Einsatzgebiet</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
+      </nav>
     </header>
-    <nav class="container breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Startseite</a><span aria-hidden="true">/</span>
-      <a href="/fensterreinigung-bodenseekreis/">Fensterreinigung in der Umgebung</a><span aria-hidden="true">/</span>
-      <span aria-current="page">Überlingen</span>
-    </nav>
-    <main>
-      <section class="local-hero container">
-        <span class="eyebrow">Fensterreinigung Überlingen</span>
-        <h1>Fensterputzen &amp; Fensterreinigung in Überlingen</h1>
-        <p class="tagline">Kurstadt am Bodensee mit Seepromenade, Münster und Therme.</p>
-        <p class="intro">Überlingen liegt rund 18 km westlich von Markdorf, direkt am Bodensee-Ufer. Als Kurstadt mit Seepromenade, Münster St. Nikolaus und der Therme Überlingen hat der Ort viele Ferienwohnungen, Gewerbeflächen und Wohnhäuser mit Seeblick – und entsprechend große Fensterflächen.</p>
-        <div class="actions">
-          <a href="/#/#kontakt" class="btn btn-primary">Termin in Überlingen anfragen</a>
-          <a href="/fensterreinigung-bodenseekreis/" class="btn btn-ghost">Ganzes Einsatzgebiet ansehen</a>
+    <main id="main-content">
+      <section class="hero">
+      <picture class="hero-media">
+        <source media="(min-width: 900px)" srcset="/media/hero-wide.webp" type="image/webp" />
+        <source media="(min-width: 900px)" srcset="/media/hero-wide.jpg" type="image/jpeg" />
+        <source srcset="/media/hero-tall.webp" type="image/webp" />
+        <img src="/media/hero-tall.jpg" alt="" aria-hidden="true" fetchpriority="high" />
+      </picture>
+      <div class="hero-veil" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <h1>Fensterreinigung in Überlingen rund um den Bodensee</h1>
+        <p>Fenster, Rahmen und Fensterbänke für Privathaushalte und Gewerbe in Überlingen.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-on-dark">Termin anfragen</a>
+          <a href="#leistungen" class="btn btn-ghost-dark">Leistungen ansehen</a>
         </div>
-      </section>
+      </div>
 
-      <section class="section container">
-        <h2>Warum LN Fensterputz statt großer Reinigungsfirma?</h2>
-        <p class="lede">Anders als große Gebäudereinigungen mit Rahmenverträgen und Callcenter-Buchung: Du sprichst direkt mit uns, bekommst ein faires Angebot ohne versteckte Kosten und bist nicht an lange Vertragslaufzeiten gebunden.</p>
-        <ul class="diff-list">
-          <li>
-            <h3>Günstiger</h3>
-            <p>Ohne große Verwaltung und ohne Zwischenhändler – die Ersparnis geben wir an dich weiter.</p>
-          </li>
-          <li>
-            <h3>Flexibler</h3>
-            <p>Einmalig oder wiederkehrend, ganz nach Bedarf – ohne Mindestlaufzeit oder Kündigungsfrist.</p>
-          </li>
-        </ul>
-        <div class="local-note">In Überlingen und den Ortsteilen Nußdorf und Andelshofen reinigen wir regelmäßig Ferienwohnungen zwischen zwei Vermietungen – schnell, zuverlässig und ohne dass ihr selbst anreisen müsst.</div>
-      </section>
+      <a href="#leistungen" class="hero-scroll" aria-label="Zu den Leistungen scrollen"><span></span></a>
+    </section>
+      <section id="leistungen" class="services">
+      <div class="container services-grid">
+        <div class="services-media" data-reveal>
+          <picture>
+            <source srcset="/media/services-windows.webp" type="image/webp" />
+            <img src="/media/services-windows.jpg" alt="Fensterfront mit blau reflektierenden Scheiben" loading="lazy" />
+          </picture>
+        </div>
 
-      <section class="section container">
-        <h2>Leistungen in Überlingen</h2>
-        <p class="lede">Glasflächen innen und außen, Rahmen, Falz und Fensterbänke – in einem Termin, für Privathaushalte und Gewerbe in Überlingen und den umliegenden Ortsteilen.</p>
-      </section>
+        <div class="services-content">
+          <div class="section-head" data-reveal>
+            <h2>Leistungen im Überblick</h2>
+          </div>
 
-      <section class="section container">
-        <h2>Häufige Frage aus Überlingen</h2>
-        <ul class="faq-list">
-      <li>
-        <h3>Bietet ihr auch Reinigung zwischen Feriengast-Wechseln in Überlingen an?</h3>
-        <p>Ja, das ist bei uns keine Ausnahme. Kurzfristige Termine zwischen zwei Vermietungen lassen sich in der Regel gut einrichten – einfach mit Wunschzeitraum anfragen.</p>
-      </li>
-    </ul>
-        <p class="hub-note">Weitere Fragen zu Preisen, Ablauf und unserem gesamten Einsatzgebiet beantworten wir auf der <a href="/fensterreinigung-bodenseekreis/">Übersichtsseite zur Umgebung</a>.</p>
-      </section>
+          <ul class="services-list">
+            <li data-reveal data-reveal-delay="0">
+              <h3>Rundum-Reinigung</h3>
+              <p>Glas, Rahmen, Falz und Fensterbank in einem Termin.</p>
+            </li>
+            <li data-reveal data-reveal-delay="70">
+              <h3>Einzel- oder Serientermin</h3>
+              <p>Einmalig oder wiederkehrend, ganz nach Bedarf.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+      <section id="einsatzgebiet" class="area">
+      <div class="container area-grid">
+        <div class="area-text" data-reveal>
+          <h2>Einsatzgebiet</h2>
+          <p>Mit Sitz in Markdorf, unterwegs im gesamten Umkreis rund um den Bodensee.</p>
+        </div>
 
-      <section class="section cta-band">
+        <div class="area-visual" data-reveal data-reveal-delay="100">
+          <iframe class="area-map" src="https://www.openstreetmap.org/export/embed.html?bbox=9.20,47.66,9.50,47.80&layer=mapnik&marker=47.7177,9.3939" title="Standort Markdorf am Bodensee" loading="lazy"></iframe>
+        </div>
+      </div>
+      
+    </section>
+      <section id="kontakt" class="contact">
       <div class="container">
-        <h2>Termin in Überlingen anfragen</h2>
-        <p class="lede">Kurze Angaben zu Gebäude und Wunschtermin genügen, wir melden uns mit einem Vorschlag.</p>
-        <div class="actions">
-          <a href="/#/#kontakt" class="btn btn-on-dark">Termin anfragen</a>
-          <a href="mailto:info@ln-fensterputz.de" class="btn btn-ghost-dark">Direkt E-Mail schreiben</a>
+        <div class="center contact-head" data-reveal>
+          <h2>Bereit für klare Sicht?</h2>
+          <p class="center">Kurze Angaben zu Gebäude und Wunschtermin genügen, wir melden uns mit einem Vorschlag.</p>
+        </div>
+
+        <div class="contact-grid">
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="cf-phone">Telefon (optional)</label>
+                <input id="cf-phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="cf-email">E-Mail</label>
+              <input id="cf-email" name="email" type="email" required autocomplete="email" />
+            </div>
+
+            <div class="form-row form-row-street">
+              <div class="field">
+                <label for="cf-street">Straße</label>
+                <input id="cf-street" name="street" type="text" required autocomplete="address-line1" />
+              </div>
+              <div class="field">
+                <label for="cf-house-number">Nr.</label>
+                <input id="cf-house-number" name="houseNumber" type="text" required autocomplete="address-line2" />
+              </div>
+            </div>
+
+            <div class="form-row form-row-zip">
+              <div class="field">
+                <label for="cf-zip">PLZ</label>
+                <input
+                  id="cf-zip"
+                  name="zip"
+                  type="text"
+                  required
+                  inputmode="numeric"
+                  pattern="[0-9]{5}"
+                  maxlength="5"
+                  autocomplete="postal-code"
+                />
+              </div>
+              <div class="field">
+                <label for="cf-city">Ort</label>
+                <input id="cf-city" name="city" type="text" required autocomplete="address-level2" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="cf-message">Nachricht</label>
+              <textarea id="cf-message" name="message" required placeholder="Gebäude, Fenster und gewünschter Zeitraum"></textarea>
+            </div>
+
+            <input type="text" name="honeypot" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <label class="field-checkbox">
+              <input type="checkbox" required />
+              <span>
+                Ich habe die
+                <a href="/#/datenschutz" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>
+                zur Kenntnis genommen und bin mit der Verarbeitung meiner Daten zur Bearbeitung meiner
+                Anfrage einverstanden.
+              </span>
+            </label>
+
+            <button type="submit" class="btn btn-primary">Termin anfragen</button>
+
+            <p class="form-status form-status-success" hidden>Danke, wir melden uns in der Regel innerhalb von 24h.</p>
+            <p class="form-status form-status-error" hidden>Das hat leider nicht geklappt. Schreibt uns gern direkt an info@ln-fensterputz.de.</p>
+          </form>
+
+          <div class="contact-direct" data-reveal data-reveal-delay="160">
+            <p class="contact-direct-lead">Lieber direkt schreiben?</p>
+            <ul class="contact-list">
+              <li>
+                <svg viewBox="0 0 256 256" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg>
+                <a href="mailto:info@ln-fensterputz.de">info@ln-fensterputz.de</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 256 256" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>
+                <a href="https://www.instagram.com/ln.fensterputz/" target="_blank" rel="noopener noreferrer"
+                  >@ln.fensterputz<span class="visually-hidden"> (öffnet in neuem Tab)</span></a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
     </main>
-    <footer class="site-footer">
+    <footer class="footer">
       <div class="container footer-grid">
-        <div>
+        <div class="footer-brand">
           <span class="footer-name">LN Fensterputz</span>
-          <p class="footer-address">
-            Döllenstraße 22<br />
-            88677 Markdorf
-          </p>
         </div>
-        <nav class="footer-col" aria-label="Leistungsgebiet">
-          <a href="/fensterreinigung-bodenseekreis/">Fensterreinigung in der Umgebung</a>
-          <a href="/fensterreinigung-friedrichshafen/">Fensterreinigung Friedrichshafen</a>
-          <a href="/fensterreinigung-ravensburg/">Fensterreinigung Ravensburg</a>
-          <a href="/fensterreinigung-ueberlingen/">Fensterreinigung Überlingen</a>
-          <a href="/fensterreinigung-meersburg/">Fensterreinigung Meersburg</a>
-          <a href="/fensterreinigung-salem/">Fensterreinigung Salem</a>
+
+        <nav class="footer-links" aria-label="Footer Navigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#ablauf">Ablauf</a>
+          <a href="#einsatzgebiet">Einsatzgebiet</a>
+          <a href="#kontakt">Kontakt</a>
         </nav>
-        <div class="footer-col">
-          <a href="mailto:info@ln-fensterputz.de">info@ln-fensterputz.de</a>
-          <a href="https://www.instagram.com/ln.fensterputz/" target="_blank" rel="noopener noreferrer">Instagram @ln.fensterputz</a>
-          <a href="https://www.tiktok.com/@fensterputzln" target="_blank" rel="noopener noreferrer">TikTok @fensterputzln</a>
+
+        <div class="footer-contact">
+          <a href="mailto:info@ln-fensterputz.de" class="footer-icon-link">
+            <svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg>
+            info@ln-fensterputz.de
+          </a>
+          <a href="https://www.instagram.com/ln.fensterputz/" target="_blank" rel="noopener noreferrer" class="footer-icon-link">
+            <svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>
+            @ln.fensterputz<span class="visually-hidden"> (öffnet in neuem Tab)</span>
+          </a>
+          <a href="https://www.tiktok.com/@fensterputzln" target="_blank" rel="noopener noreferrer" class="footer-icon-link">
+            <svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,0,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,0,1-120,0c0-25.9,16.64-49.13,40-57.6v27.67A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z"/></svg>
+            @fensterputzln<span class="visually-hidden"> (öffnet in neuem Tab)</span>
+          </a>
         </div>
       </div>
+
       <div class="container footer-bottom">
         <span>© 2026 LN Fensterputz GbR</span>
         <a href="/#/impressum">Impressum</a>
         <a href="/#/datenschutz">Datenschutz</a>
       </div>
     </footer>
+    <script src="/site.js" defer></script>
   </body>
 </html>
