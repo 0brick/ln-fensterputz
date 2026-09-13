@@ -1,6 +1,5 @@
 <script setup>
 import { PhInstagramLogo as InstagramLogo, PhEnvelopeSimple as EnvelopeSimple, PhTiktokLogo as TiktokLogo } from "@phosphor-icons/vue";
-import { business, priorityCities } from "../data/serviceArea.js";
 
 const year = new Date().getFullYear();
 </script>
@@ -10,10 +9,6 @@ const year = new Date().getFullYear();
     <div class="container footer-grid">
       <div class="footer-brand">
         <span class="footer-name">LN Fensterputz</span>
-        <address class="footer-address">
-          {{ business.street }}<br />
-          {{ business.zip }} {{ business.city }}
-        </address>
       </div>
 
       <nav class="footer-links" aria-label="Footer Navigation">
@@ -21,11 +16,6 @@ const year = new Date().getFullYear();
         <router-link :to="{ path: '/', hash: '#ablauf' }">Ablauf</router-link>
         <router-link :to="{ path: '/', hash: '#einsatzgebiet' }">Einsatzgebiet</router-link>
         <router-link :to="{ path: '/', hash: '#kontakt' }">Kontakt</router-link>
-      </nav>
-
-      <nav class="footer-links" aria-label="Einsatzgebiet Navigation">
-        <a href="/fensterreinigung-bodenseekreis/">Fensterreinigung in der Umgebung</a>
-        <a v-for="c in priorityCities" :key="c.slug" :href="`/${c.slug}/`">Fensterreinigung {{ c.name }}</a>
       </nav>
 
       <div class="footer-contact">
@@ -86,14 +76,6 @@ const year = new Date().getFullYear();
   color: #fff;
 }
 
-.footer-address {
-  display: block;
-  margin-top: 12px;
-  font-size: 0.9rem;
-  font-style: normal;
-  line-height: 1.6;
-}
-
 .footer-links,
 .footer-contact {
   display: flex;
@@ -129,13 +111,7 @@ const year = new Date().getFullYear();
 
 @media (min-width: 720px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 1000px) {
-  .footer-grid {
-    grid-template-columns: 1.1fr 1fr 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr 1fr;
   }
 }
 </style>

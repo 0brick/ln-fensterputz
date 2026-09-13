@@ -13,8 +13,7 @@
     <div class="container hero-content">
       <h1>Fensterreinigung rund um den Bodensee</h1>
       <p>
-        Fenster, Rahmen und Fensterbänke für Privathaushalte und Gewerbe – günstiger und
-        flexibler als große Gebäudereinigungen, ohne feste Vertragsbindung.
+        Fenster, Rahmen und Fensterbänke für Privathaushalte und Gewerbe.
       </p>
       <div class="hero-actions">
         <router-link :to="{ path: '/', hash: '#kontakt' }" class="btn btn-on-dark">Termin anfragen</router-link>
