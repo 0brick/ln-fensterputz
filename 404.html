@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Seite nicht gefunden – LN Fensterputz</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      @font-face {
+        font-family: "Fira Sans";
+        src: url("/fonts/fira-sans-400.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Fira Sans";
+        src: url("/fonts/fira-sans-600.woff2") format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Fira Sans";
+        src: url("/fonts/fira-sans-700.woff2") format("woff2");
+        font-weight: 700;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Fira Sans";
+        src: url("/fonts/fira-sans-900.woff2") format("woff2");
+        font-weight: 900;
+        font-display: swap;
+      }
+
+      :root {
+        --navy-deep: #050f1a;
+        --accent-soft: rgba(255, 255, 255, 0.86);
+        color-scheme: dark;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .page {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        background: var(--navy-deep);
+        color: #fff;
+      }
+
+      .bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: grayscale(1) contrast(1.08) brightness(0.92);
+      }
+
+      .veil {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(0, 29, 53, 0.7) 0%, rgba(0, 29, 53, 0.6) 38%, rgba(0, 29, 53, 0.88) 100%);
+      }
+
+      .brand {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 28px 24px 0;
+        font-weight: 700;
+        font-size: 1.06rem;
+        letter-spacing: -0.01em;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .brand-mark {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        color: #fff;
+      }
+
+      .content {
+        position: relative;
+        z-index: 2;
+        flex: 1;
+        width: 100%;
+        max-width: 520px;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 48px 24px 72px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.68);
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        margin: 0;
+        font-weight: 900;
+        font-size: clamp(2rem, 6vw, 3rem);
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+
+      p {
+        margin: 20px 0 0;
+        line-height: 1.6;
+        font-size: 1.02rem;
+        color: var(--accent-soft);
+        max-width: 42ch;
+      }
+
+      .actions {
+        margin-top: 36px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        padding: 15px 28px;
+        border-radius: 7px;
+        font-size: 0.96rem;
+        font-weight: 600;
+        font-family: inherit;
+        letter-spacing: -0.005em;
+        border: 1.5px solid rgba(255, 255, 255, 0.55);
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .btn:hover {
+        background: #fff;
+        color: var(--navy-deep);
+        border-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="bg" aria-hidden="true">
+        <img src="/media/404-bg.jpg" alt="" />
+      </div>
+      <div class="veil" aria-hidden="true"></div>
+
+      <a href="/" class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="4" y="4" width="24" height="24" />
+          <line x1="16" y1="4" x2="16" y2="28" />
+          <line x1="4" y1="16" x2="28" y2="16" />
+        </svg>
+        <span>LN Fensterputz</span>
+      </a>
+
+      <div class="content">
+        <span class="eyebrow">Fehler 404</span>
+        <h1>Hier ist wohl geputzt worden.</h1>
+        <p>Diese Seite gibt es nicht oder sie wurde verschoben. Zurück zur Startseite geht’s wieder klar weiter.</p>
+        <div class="actions">
+          <a class="btn" href="/">Zur Startseite</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
