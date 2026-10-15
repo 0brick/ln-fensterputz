@@ -9,8 +9,8 @@ const services = [
     text: "Einmalig oder wiederkehrend, ganz nach Bedarf.",
   },
   {
-    title: "Jahresangebot",
-    text: "Drei Reinigungen pro Jahr (Frühjahr, Sommer, Herbst) mit 15% Rabatt.",
+    title: "Jahresangebot verfügbar",
+    text: "Alle Details zu unserem planbaren Jahresangebot finden Sie im eigenen Abschnitt weiter unten.",
   },
 ];
 </script>
