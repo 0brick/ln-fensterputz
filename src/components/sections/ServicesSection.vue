@@ -8,6 +8,10 @@ const services = [
     title: "Einzel- oder Serientermin",
     text: "Einmalig oder wiederkehrend, ganz nach Bedarf.",
   },
+  {
+    title: "Jahresangebot",
+    text: "Drei Reinigungen pro Jahr (Frühjahr, Sommer, Herbst) mit 15% Rabatt.",
+  },
 ];
 </script>
 
