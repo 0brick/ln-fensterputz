@@ -397,7 +397,7 @@ function page({ title, description, slug, ld, h1, intro, area }) {
 
 function cityPage(city) {
   const title = `Fensterreinigung & Fensterputzen in ${city.name} | ${business.name}`;
-  const description = `${city.name} Fensterputzen & Fensterreinigung – günstig und flexibel, ohne Vertragsbindung. Fenster, Rahmen & Fensterbänke von ${business.name} aus Markdorf. Jetzt Termin anfragen.`;
+  const description = `${city.name} Fensterputzen & Fensterreinigung – günstig und flexibel, Einzeltermine ohne Vertragsbindung. Fenster, Rahmen & Fensterbänke von ${business.name} aus Markdorf. Jetzt Termin anfragen.`;
 
   return page({
     title,
