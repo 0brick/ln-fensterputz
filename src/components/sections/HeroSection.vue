@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+import { useSectionLink } from "../../composables/useSectionLink";
+
+// Set on the city pages (see routes in src/router.js); the homepage has no city.
+const props = defineProps({ city: { type: String, default: "" } });
+const sectionLink = useSectionLink();
+</script>
 
 <template>
   <section class="hero">
@@ -11,13 +17,13 @@
     <div class="hero-veil" aria-hidden="true"></div>
 
     <div class="container hero-content">
-      <h1>Fensterreinigung rund um den Bodensee</h1>
+      <h1>{{ props.city ? `Fensterreinigung in ${props.city}` : "Fensterreinigung rund um den Bodensee" }}</h1>
       <p>
         Fenster, Rahmen und Fensterbänke für Privathaushalte und Gewerbe.
       </p>
       <div class="hero-actions">
-        <router-link :to="{ path: '/', hash: '#kontakt' }" class="btn btn-on-dark">Termin anfragen</router-link>
-        <router-link :to="{ path: '/', hash: '#leistungen' }" class="btn btn-ghost-dark">Leistungen ansehen</router-link>
+        <router-link :to="sectionLink('#kontakt')" class="btn btn-on-dark">Termin anfragen</router-link>
+        <router-link :to="sectionLink('#leistungen')" class="btn btn-ghost-dark">Leistungen ansehen</router-link>
       </div>
     </div>
 

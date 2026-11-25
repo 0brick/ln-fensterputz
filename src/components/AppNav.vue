@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from "vue";
+import { useSectionLink } from "../composables/useSectionLink";
+
+const sectionLink = useSectionLink();
 
 const open = ref(false);
 
@@ -25,7 +28,7 @@ function closeMenu() {
         <router-link
           v-for="link in links"
           :key="link.hash"
-          :to="{ path: '/', hash: link.hash }"
+          :to="sectionLink(link.hash)"
           >{{ link.label }}</router-link
         >
       </nav>
@@ -47,11 +50,11 @@ function closeMenu() {
         <router-link
           v-for="link in links"
           :key="link.hash"
-          :to="{ path: '/', hash: link.hash }"
+          :to="sectionLink(link.hash)"
           @click="closeMenu"
           >{{ link.label }}</router-link
         >
-        <router-link :to="{ path: '/', hash: '#kontakt' }" class="btn btn-primary" @click="closeMenu">
+        <router-link :to="sectionLink('#kontakt')" class="btn btn-primary" @click="closeMenu">
           Termin anfragen
         </router-link>
       </nav>

@@ -1,7 +1,10 @@
 <script setup>
+import { priorityCities } from "../data/serviceArea.js";
+import { useSectionLink } from "../composables/useSectionLink";
 import { PhInstagramLogo as InstagramLogo, PhEnvelopeSimple as EnvelopeSimple, PhTiktokLogo as TiktokLogo } from "@phosphor-icons/vue";
 
 const year = new Date().getFullYear();
+const sectionLink = useSectionLink();
 </script>
 
 <template>
@@ -12,10 +15,14 @@ const year = new Date().getFullYear();
       </div>
 
       <nav class="footer-links" aria-label="Footer Navigation">
-        <router-link :to="{ path: '/', hash: '#leistungen' }">Leistungen</router-link>
-        <router-link :to="{ path: '/', hash: '#ablauf' }">Ablauf</router-link>
-        <router-link :to="{ path: '/', hash: '#einsatzgebiet' }">Einsatzgebiet</router-link>
-        <router-link :to="{ path: '/', hash: '#kontakt' }">Kontakt</router-link>
+        <router-link :to="sectionLink('#leistungen')">Leistungen</router-link>
+        <router-link :to="sectionLink('#einsatzgebiet')">Einsatzgebiet</router-link>
+        <router-link :to="sectionLink('#kontakt')">Kontakt</router-link>
+      </nav>
+
+      <nav class="footer-links" aria-label="Einsatzorte">
+        <router-link v-for="c in priorityCities" :key="c.slug" :to="`/${c.slug}/`">Fensterreinigung {{ c.name }}</router-link>
+        <router-link to="/">Alle Orte im Bodenseekreis</router-link>
       </nav>
 
       <div class="footer-contact">
@@ -47,8 +54,8 @@ const year = new Date().getFullYear();
 
     <div class="container footer-bottom">
       <span>© {{ year }} LN Fensterputz GbR</span>
-      <router-link to="/impressum">Impressum</router-link>
-      <router-link to="/datenschutz">Datenschutz</router-link>
+      <router-link to="/impressum/">Impressum</router-link>
+      <router-link to="/datenschutz/">Datenschutz</router-link>
     </div>
   </footer>
 </template>
@@ -111,7 +118,13 @@ const year = new Date().getFullYear();
 
 @media (min-width: 720px) {
   .footer-grid {
-    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer-grid {
+    grid-template-columns: 1.1fr 0.8fr 1.2fr 1.2fr;
   }
 }
 </style>

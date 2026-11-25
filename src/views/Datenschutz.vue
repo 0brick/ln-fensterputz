@@ -16,7 +16,7 @@
         </p>
         <p>
           Weitere Angaben zu uns finden Sie im
-          <router-link to="/impressum">Impressum</router-link>. Ein Datenschutzbeauftragter ist
+          <router-link to="/impressum/">Impressum</router-link>. Ein Datenschutzbeauftragter ist
           nicht bestellt, da hierzu keine gesetzliche Pflicht besteht.
         </p>
       </section>

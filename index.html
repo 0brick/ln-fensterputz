@@ -9,10 +9,26 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://ln-fensterputz.de/" />
 
+    <script>
+      // Früher lief die Seite mit Hash-Routing (/#/impressum). Alte Links und Lesezeichen
+      // auf die echten URLs umleiten: /#/ -> /, /#/impressum -> /impressum/, /#/#kontakt -> /#kontakt
+      (function () {
+        var hash = location.hash;
+        if (hash.indexOf("#/") !== 0) return;
+        var rest = hash.slice(1);
+        var i = rest.indexOf("#");
+        var path = i === -1 ? rest : rest.slice(0, i);
+        var anchor = i === -1 ? "" : rest.slice(i);
+        if (path.slice(-1) !== "/") path += "/";
+        if (path === "/") history.replaceState(null, "", "/" + anchor);
+        else location.replace(path + anchor);
+      })();
+    </script>
+
     <title>LN Fensterputz – Günstige Fensterreinigung am Bodensee</title>
     <meta
       name="description"
-      content="Günstiger, flexibler Fensterputzservice in Markdorf und rund um den Bodensee: Friedrichshafen, Überlingen, Ravensburg, Meersburg, Salem u. v. m. Fenster, Rahmen & Fensterbänke – Einzeltermine ohne feste Verträge. Jetzt anfragen."
+      content="Fensterputzer aus Markdorf: Glas, Rahmen &amp; Fensterbänke innen und außen – für Privathaushalte und Gewerbe am Bodensee. Ohne Vertrag. Jetzt anfragen."
     />
 
     <meta property="og:title" content="LN Fensterputz – Günstige Fensterreinigung am Bodensee" />
@@ -22,7 +38,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ln-fensterputz.de/" />
-    <meta property="og:image" content="https://ln-fensterputz.de/media/og-image.png" />
+    <meta property="og:image" content="https://ln-fensterputz.de/media/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="de_DE" />
@@ -34,18 +50,19 @@
       name="twitter:description"
       content="Günstiger, flexibler Fensterputzservice in Markdorf und rund um den Bodensee: Fenster, Rahmen und Fensterbänke innen und außen, Einzeltermine ohne feste Verträge."
     />
-    <meta name="twitter:image" content="https://ln-fensterputz.de/media/og-image.png" />
+    <meta name="twitter:image" content="https://ln-fensterputz.de/media/og-image.jpg" />
 
     <link rel="preload" href="/fonts/fira-sans-900.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/fira-sans-500.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/media/hero-wide.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/media/hero-wide.webp" as="image" type="image/webp" media="(min-width: 900px)" />
+    <link rel="preload" href="/media/hero-tall.webp" as="image" type="image/webp" media="(max-width: 899px)" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "LN Fensterputz",
-        "image": "https://ln-fensterputz.de/media/og-image.png",
+        "image": "https://ln-fensterputz.de/media/og-image.jpg",
         "url": "https://ln-fensterputz.de/",
         "email": "info@ln-fensterputz.de",
         "priceRange": "€",
