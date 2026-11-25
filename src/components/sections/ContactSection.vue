@@ -171,7 +171,7 @@ async function submitForm() {
             <input v-model="form.privacyAccepted" type="checkbox" required />
             <span>
               Ich habe die
-              <router-link :to="{ path: '/datenschutz' }" target="_blank" rel="noopener noreferrer"
+              <router-link to="/datenschutz/" target="_blank" rel="noopener noreferrer"
                 >Datenschutzerklärung</router-link
               >
               zur Kenntnis genommen und bin mit der Verarbeitung meiner Daten zur Bearbeitung meiner

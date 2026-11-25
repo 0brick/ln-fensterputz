@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { useSectionLink } from "../../composables/useSectionLink";
+
+const sectionLink = useSectionLink();
+</script>
 
 <template>
   <section id="jahresangebot" class="annual-offer">
@@ -27,7 +31,7 @@
 
           <div class="annual-offer-cta" v-reveal="{ delay: 220 }">
             <p>Gern beraten wir Sie, ob das Jahresangebot zu Gebäude und Nutzungsrhythmus passt.</p>
-            <router-link :to="{ path: '/', hash: '#kontakt' }" class="btn btn-ghost">Jahresangebot anfragen</router-link>
+            <router-link :to="sectionLink('#kontakt')" class="btn btn-ghost">Jahresangebot anfragen</router-link>
           </div>
         </div>
 
