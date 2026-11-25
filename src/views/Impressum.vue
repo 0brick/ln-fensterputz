@@ -15,14 +15,36 @@
       </section>
 
       <section>
-        <h2>Vertreten durch</h2>
-        <p>Linus Kurz</p>
+        <h2>Vertreten durch die Gesellschafter</h2>
+        <p>
+          Linus Kurz<br />
+          Niilo Wilkens
+        </p>
       </section>
 
       <section>
         <h2>Kontakt</h2>
         <p>
+          Telefon: <a href="tel:+491604373127">+49 160 4373127</a><br />
           E-Mail: <a href="mailto:info@ln-fensterputz.de">info@ln-fensterputz.de</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>Zuständige Kammer</h2>
+        <p>
+          Handwerkskammer Ulm<br />
+          Olgastraße 72<br />
+          89073 Ulm<br />
+          <a href="https://www.hwk-ulm.de" target="_blank" rel="noopener">www.hwk-ulm.de</a>
+        </p>
+        <p>
+          Eingetragenes Gewerk: Gebäudereiniger (Fensterreinigung), zulassungsfreies Handwerk
+          nach Anlage B Abschnitt 1 der Handwerksordnung (HwO)
+        </p>
+        <p>
+          Berufsrechtliche Regelungen: Handwerksordnung (HwO), einsehbar unter
+          <a href="https://www.gesetze-im-internet.de/hwo/" target="_blank" rel="noopener">www.gesetze-im-internet.de/hwo</a>
         </p>
       </section>
 
