@@ -20,8 +20,8 @@
               <p>Abgestimmte Zeitfenster für konstant gepflegte Fensterflächen.</p>
             </li>
             <li class="annual-offer-highlight" v-reveal="{ delay: 190 }">
-              <h3>15% Rabatt</h3>
-              <p>Auf den Gesamtumfang des Jahrespakets.</p>
+              <h3>15 % Rabatt</h3>
+              <p>Auf den Gesamtpreis der drei Reinigungen – exklusiv bei Buchung als Jahrespaket.</p>
             </li>
           </ul>
 
@@ -30,6 +30,13 @@
             <router-link :to="{ path: '/', hash: '#kontakt' }" class="btn btn-ghost">Jahresangebot anfragen</router-link>
           </div>
         </div>
+
+        <p class="annual-offer-note" v-reveal="{ delay: 250 }">
+          Unsere Einzeltermine buchen Sie ohne Vertragsbindung. Das Jahresangebot ist die einzige
+          Ausnahme: eine feste Vereinbarung über drei Reinigungen im Jahr. Der Rabatt von 15 % gilt
+          nur, wenn der Auftrag bei Vertragsschluss ausdrücklich als Jahrespaket vereinbart wird;
+          eine nachträgliche Anrechnung auf bereits gebuchte Einzeltermine ist nicht möglich.
+        </p>
       </div>
     </div>
   </section>
@@ -98,6 +105,16 @@
   line-height: 1.55;
   color: var(--ink-soft);
   max-width: 44ch;
+}
+
+.annual-offer-note {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 78ch;
 }
 
 @media (min-width: 640px) {
